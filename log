@@ -548,3 +548,42 @@ Fri 15 Mar 2024 03:26:43 AM UTC:
  tests:  0|2
 total_score: 50/70
 6b60018
+Fri 15 Mar 2024 02:14:08 PM UTC: 
+ exercises.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘crearListaEnlazada’:
+exercises.c:155:3: error: unknown type name ‘nodo’; use ‘struct’ keyword to refer to the type
+  155 |   nodo *head = NULL;
+      |   ^~~~
+      |   struct 
+exercises.c:156:3: error: unknown type name ‘nodo’; use ‘struct’ keyword to refer to the type
+  156 |   nodo *temp = NULL;
+      |   ^~~~
+      |   struct 
+exercises.c:157:3: error: unknown type name ‘nodo’; use ‘struct’ keyword to refer to the type
+  157 |   nodo *actl = NULL;
+      |   ^~~~
+      |   struct 
+exercises.c:159:13: error: ‘nodo’ undeclared (first use in this function)
+  159 |     temp = (nodo *) malloc (sizeof(nodo));
+      |             ^~~~
+exercises.c:159:13: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:159:19: error: expected expression before ‘)’ token
+  159 |     temp = (nodo *) malloc (sizeof(nodo));
+      |                   ^
+exercises.c:160:9: error: request for member ‘numero’ in something not a structure or union
+  160 |     temp->numero = arr[i];
+      |         ^~
+exercises.c:161:9: error: request for member ‘siguiente’ in something not a structure or union
+  161 |     temp->siguiente = NULL;
+      |         ^~
+exercises.c:164:14: error: request for member ‘siguiente’ in something not a structure or union
+  164 |     else actl->siguiente = temp;
+      |              ^~
+exercises.c:167:10: error: returning ‘int *’ from a function with incompatible return type ‘Nodo *’ {aka ‘struct nodo *’} [-Werror=incompatible-pointer-types]
+  167 |   return head;
+      |          ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b5df67c
