@@ -66,16 +66,15 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) 
+void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[]) 
 {
   int ctrlar1 = 0;
   int ctrlar2 = 0;
   for(int i = 0; i < (size1 + size2); i++) {
-    if(arr1[ctrlar1] <= arr2[ctrlar2] && ctrlar1 < size1) {
+    if(ctrlar2 == size2 || (arr1[ctrlar1] <= arr2[ctrlar2] && ctrlar1 < size1)) {
       result[i] = arr1[ctrlar1];
       ctrlar1++;
-    } else /*if(arr2[ctrlar2] < arr1[ctrlar1]) */{
+    } else {
       result[i] = arr2[ctrlar2];
       ctrlar2++;
     }
@@ -88,7 +87,19 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) 
+{
+  short check;
+  if(arr[0] < arr[1]) check = 1;
+  else check = -1;
+  short aux = check;
+  for(int i = 0; i < (size - 1); i++) {
+    if(arr[i] < arr[i + 1]) aux = 1;
+    else aux = -1;
+    if(check != aux) return 0;
+  }
+  return check;
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
