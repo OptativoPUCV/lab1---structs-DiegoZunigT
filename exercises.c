@@ -93,6 +93,7 @@ int checkSorted(int arr[], int size)
   int aux = check;
   for(int i = 0; i < (size - 1); i++) {
     if(arr[aux] == arr[aux + 1]) {
+      aux++;
       continue;
     } else if(arr[aux] < arr[aux + 1]) {
       check = 1;
@@ -100,7 +101,7 @@ int checkSorted(int arr[], int size)
       check = -1;
     }
     aux++;
-    if(i == (size - 1)) return 1;
+    if(i == (size - 2)) return 1;
   }
   printf("%d -> %d : %d - %d\n", arr[0], size, check, aux);
   aux = check;
