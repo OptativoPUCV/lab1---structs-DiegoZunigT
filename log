@@ -355,3 +355,13 @@ exercises.c:55:15: error: subscripted value is neither array nor pointer nor vec
       |               ^
 Compilation failed
 ed64ea0
+Fri 15 Mar 2024 02:20:32 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:55:7: error: invalid type argument of unary ‘*’ (have ‘int’)
+   55 |       *evarr[aux] = arr[i];
+      |       ^~~~~~~~~~~
+Compilation failed
+559418c
