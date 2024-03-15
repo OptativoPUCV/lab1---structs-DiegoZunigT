@@ -60,19 +60,6 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   return evarr;
 }
 
-/*{
-  int *evarr = NULL;
-  (*newSize) = 0;
-  for(int i = 0; i < size; i++) {
-    if(arr[i] % 2 == 0) {
-      evarr = (int *) realloc (evarr, (*newSize + 1) * sizeof(int));
-      evarr[*newSize] = arr[i];
-      (*newSize)++;
-    }
-  }
-  return evarr;
-}*/
-
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
 Descripción: Escribe una función que tome dos arreglos
@@ -80,7 +67,20 @@ ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
 void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {}
+                       int result[]) 
+{
+  int ctrlar1 = 0;
+  int ctrlar2 = 0;
+  for(int i = 0; i < (size1 + size2); i++) {
+    if(arr1[ctrlar1] <= arr2[ctrlar2] && ctrlar1 < size1) {
+      result[i] = arr1[ctrlar1];
+      ctrlar1++;
+    } else if(arr2[ctrlar2] < arr1[ctrlar1]) {
+      result[i] = arr2[ctrlar2];
+      ctrlar2++;
+    }
+  }
+}
 
 /*
 Ejercicio 5: Comprobación de Ordenación
