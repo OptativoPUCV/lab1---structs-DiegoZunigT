@@ -135,7 +135,8 @@ typedef struct {
 void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
                       int anioNacimiento, int anioPublicacion) 
 {
-  libro->titulo = titulo;
+  strcpy(titulo, libro->titulo);
+  //libro->titulo = titulo;
 }
 
 /*
