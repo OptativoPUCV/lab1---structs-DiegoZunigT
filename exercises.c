@@ -96,7 +96,8 @@ int checkSorted(int arr[], int size)
   for(int i = 0; i < (size - 1); i++) {
     if(arr[i] <= arr[i + 1]) aux = 1;
     else if(arr[i] >= arr[i + 1]) aux = -1;
-    if(check == aux) return 0;
+    //printf("%d - %d\n", check, aux);
+    if(check != aux) return 0;
   }
   return check;
 }
