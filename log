@@ -329,3 +329,14 @@ exercises.c:50:19: error: ‘cont’ may be used uninitialized [-Werror=maybe-un
 cc1: all warnings being treated as errors
 Compilation failed
 335e718
+Fri 15 Mar 2024 02:19:15 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:59:10: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   59 |   return *evarr;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+ad2d16e
