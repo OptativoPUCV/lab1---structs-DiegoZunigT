@@ -614,3 +614,13 @@ exercises.c:138:8: error: ‘libro’ is a pointer; did you mean to use ‘->’
       |        ->
 Compilation failed
 24a4bd5
+Fri 15 Mar 2024 02:37:08 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘inicializarLibro’:
+exercises.c:138:17: error: assignment to expression with array type
+  138 |   libro->titulo = titulo;
+      |                 ^
+Compilation failed
+a297605
