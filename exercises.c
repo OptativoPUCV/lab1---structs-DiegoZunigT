@@ -42,6 +42,22 @@ los números pares del arreglo original.
 */
 int *filterEvenNumbers(int arr[], int size, int *newSize) 
 {
+  int cont;
+  for(int i = 0; i < size; i++) {
+    if(arr[i] % 2 == 0) cont++;
+  }
+  int evarr[cont];
+  int aux = 0;
+  for(int i = 0; i < size; i++) {
+    if(arr[i] % 2 == 0) {
+      evarr[aux] = arr[i];
+      aux++;
+    }
+  }
+  return evarr;
+}
+
+/*{
   int *evarr = NULL;
   (*newSize) = 0;
   for(int i = 0; i < size; i++) {
@@ -52,7 +68,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
     }
   }
   return evarr;
-}
+}*/
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
