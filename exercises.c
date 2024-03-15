@@ -91,11 +91,11 @@ int checkSorted(int arr[], int size)
 {
   short check;
   if(arr[0] <= arr[1]) check = 1;
-  else check = -1;
+  else if(arr[0] >= arr[1]) check = -1;
   short aux = check;
   for(int i = 0; i < (size - 1); i++) {
     if(arr[i] <= arr[i + 1]) aux = 1;
-    else aux = -1;
+    else if(arr[i] >= arr[i + 1]) aux = -1;
     if(check != aux) return 0;
   }
   return check;
