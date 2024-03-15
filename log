@@ -85,3 +85,9 @@ exercises.c:28:7: error: variable ‘auxarr’ set but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 3c03ab6
+Fri 15 Mar 2024 01:59:45 AM UTC: 
+ exercises.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+ tests:  0|5
+total_score: 20/70
+09e1250
