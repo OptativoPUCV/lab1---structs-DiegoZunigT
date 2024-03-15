@@ -56,7 +56,7 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
       aux++;
     }
   }
-  (*newSize) = aux - 1;
+  (*newSize) = aux;
   return evarr;
 }
 
