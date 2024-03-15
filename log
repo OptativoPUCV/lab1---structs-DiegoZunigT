@@ -33,3 +33,17 @@ Fri 15 Mar 2024 01:56:37 AM UTC:
  tests:  0|6
 total_score: 10/70
 9c3c133
+Fri 15 Mar 2024 01:57:32 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:32:7: error: expected expression before ‘]’ token
+   32 |   arr[] = auxarr[];
+      |       ^
+exercises.c:28:7: error: variable ‘auxarr’ set but not used [-Werror=unused-but-set-variable]
+   28 |   int auxarr[size - 1];
+      |       ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+72669ef
