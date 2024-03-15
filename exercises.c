@@ -89,10 +89,10 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 */
 int checkSorted(int arr[], int size) 
 {
-  short check;
+  int check;
   if(arr[0] <= arr[1]) check = 1;
   else if(arr[0] >= arr[1]) check = -1;
-  short aux = check;
+  int aux = check;
   for(int i = 0; i < (size - 1); i++) {
     if(arr[i] <= arr[i + 1]) aux = 1;
     else if(arr[i] >= arr[i + 1]) aux = -1;
