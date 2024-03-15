@@ -242,3 +242,17 @@ Fri 15 Mar 2024 02:12:45 AM UTC:
  tests:  0|4
 total_score: 30/70
 46148be
+Fri 15 Mar 2024 02:13:24 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:15: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+   49 |       evarr = (int) realloc (evarr, (*newSize + 1) * sizeof(int));
+      |               ^
+exercises.c:49:13: error: assignment to ‘int *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+   49 |       evarr = (int) realloc (evarr, (*newSize + 1) * sizeof(int));
+      |             ^
+cc1: all warnings being treated as errors
+Compilation failed
+bbf11c2
