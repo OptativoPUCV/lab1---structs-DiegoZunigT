@@ -315,3 +315,17 @@ exercises.c:60:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 57350e6
+Fri 15 Mar 2024 02:19:03 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:59:10: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   59 |   return *evarr;
+      |          ^~~~~~
+exercises.c:50:19: error: ‘cont’ may be used uninitialized [-Werror=maybe-uninitialized]
+   50 |   evarr = (int *) malloc (sizeof(int) * cont);
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+335e718
