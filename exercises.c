@@ -46,7 +46,9 @@ int *filterEvenNumbers(int arr[], int size, int *newSize)
   for(int i = 0; i < size; i++) {
     if(arr[i] % 2 == 0) cont++;
   }
-  int evarr[cont];
+  int *evarr = NULL;
+  evarr = (int *) malloc (sizeof(int) * cont);
+  if(evarr == NULL) exit(EXIT_FAILURE);
   int aux = 0;
   for(int i = 0; i < size; i++) {
     if(arr[i] % 2 == 0) {
