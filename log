@@ -144,3 +144,17 @@ exercises.c:50:15: error: subscripted value is neither array nor pointer nor vec
 cc1: all warnings being treated as errors
 Compilation failed
 8399267
+Fri 15 Mar 2024 02:07:34 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:14: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   49 |       *evarr = (int *) realloc (evarr, (*newSize + 1) * sizeof(int));
+      |              ^
+exercises.c:50:15: error: subscripted value is neither array nor pointer nor vector
+   50 |       (*evarr)[*newSize] = arr[i];
+      |               ^
+cc1: all warnings being treated as errors
+Compilation failed
+d66130f
