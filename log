@@ -91,3 +91,31 @@ Fri 15 Mar 2024 01:59:45 AM UTC:
  tests:  0|5
 total_score: 20/70
 09e1250
+Fri 15 Mar 2024 02:05:28 AM UTC: 
+ exercises.c | 14 +++++++++++++-
+ 1 file changed, 13 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘filterEvenNumbers’:
+exercises.c:49:33: error: passing argument 1 of ‘realloc’ makes pointer from integer without a cast [-Werror=int-conversion]
+   49 |       *evarr = (int *) realloc (*evarr, (*newSize + 1) * sizeof(int));
+      |                                 ^~~~~~
+      |                                 |
+      |                                 int
+In file included from exercises.c:4,
+                 from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:551:29: note: expected ‘void *’ but argument is of type ‘int’
+  551 | extern void *realloc (void *__ptr, size_t __size)
+      |                       ~~~~~~^~~~~
+In file included from test.c:1:
+exercises.c:49:14: error: assignment to ‘int’ from ‘int *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   49 |       *evarr = (int *) realloc (*evarr, (*newSize + 1) * sizeof(int));
+      |              ^
+exercises.c:50:15: error: subscripted value is neither array nor pointer nor vector
+   50 |       (*evarr)[*newSize] = arr[i];
+      |               ^
+exercises.c:54:11: error: returning ‘int’ from a function with return type ‘int *’ makes pointer from integer without a cast [-Werror=int-conversion]
+   54 |   return (*evarr);
+      |          ~^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+8bc92dc
