@@ -90,7 +90,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 {
   int check;
-  printf("%d", size);
+  printf("- - - %d - - -", size);
   if(arr[0] <= arr[1]) check = 1;
   else if(arr[0] >= arr[1]) check = -1;
   int aux = check;
@@ -98,7 +98,7 @@ int checkSorted(int arr[], int size)
     if(arr[i] < arr[i + 1]) aux = 1;
     else if(arr[i] > arr[i + 1]) aux = -1;
     else continue;
-    printf("%d - %d\n", check, aux);
+    //printf("%d - %d\n", check, aux);
     if(check != aux) return 0;
   }
   return check;
