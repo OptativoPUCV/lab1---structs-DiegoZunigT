@@ -102,7 +102,7 @@ int checkSorted(int arr[], int size)
     aux++;
     if(i == (size - 1)) return 1;
   }
-  printf("%d - %d\n", check, aux);
+  printf("%d -> %d : %d - %d\n", arr[0], size, check, aux);
   aux = check;
   for(int i = 0; i < (size - 1); i++) {
     if(arr[i] < arr[i + 1]) aux = 1;
